@@ -1,6 +1,6 @@
-# Dual (live) boot (for NVIDIA Optimus)
+# Dual (live) boot (for NVIDIA Optimus laptops)
 
-> A guide about how to setup QEMU/KVM for passing resources from a Linux host to a VM guest.
+> A guide about how to setup QEMU/KVM for passing resources from a Linux host to a VM guest on NVIDIA Optimus laptops.
 
 This repository serves as documentation for my setup process. This may also help someone with similar hardware/problems.
 
