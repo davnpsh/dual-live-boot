@@ -33,7 +33,7 @@ I don't want to install spyware. It looks (and runs) better on virtualized envir
 
 I was inspired to make this documentation by reading the [Risingprism's guide](https://gitlab.com/risingprismtv/single-gpu-passthrough).
 
-Most of this setup is thanks to Steve's effort on making a [seamless VFIO switching](https://www.youtube.com/watch?v=LtgEUfpRbZA&t=1s) with a similar setup.
+Most of this setup is inspired by Steve's effort on making a [seamless VFIO switching](https://www.youtube.com/watch?v=LtgEUfpRbZA&t=1s) with a similar setup.
 
 <hr>
 
