@@ -10,7 +10,7 @@ To start, go to the [wiki](https://github.com/davnpsh/dual-live-boot/wiki/1\)-Re
 
 <img src="./imgs/based_pepe.png" width="30%" align="right"/>
 
-This is a setup ideal for **NVIDIA OPTIMUS** laptops and/or for people with multiple GPUs on their systems and want to dual boot two operating systems at the same time without having to restart or kill the current desktop session.
+This is a setup ideal for **NVIDIA Optimus** laptops and/or for people with multiple GPUs (one of them being NVIDIA) on their systems and want to dual boot two operating systems at the same time without having to restart or kill the current desktop session.
 
 I use Arch Linux (btw), but in theory this setup should be possible in Debian-based distros, Fedora, etc. with minor differences (secure boot, package names, ...).
 
