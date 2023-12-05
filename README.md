@@ -2,6 +2,15 @@
 
 > A guide about how to setup QEMU/KVM for passing resources from a Linux host to a VM guest on NVIDIA Optimus laptops.
 
+<div align="center">
+
+<img src="./imgs/nvidia_optimus.jpg" width="40%"/>
+<img src="./imgs/kvm.png" width="40%"/>
+
+</div>
+
+<br>
+
 This repository serves as documentation for my setup process. This may also help someone with similar hardware/problems.
 
 To start, go to the [wiki](https://github.com/davnpsh/dual-live-boot/wiki/1\)-Requirements).
