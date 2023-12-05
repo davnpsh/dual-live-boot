@@ -3,7 +3,7 @@
 Now, we need to get QEMU/KVM. In Arch Linux:
 
 ```bash
-sudo pacman -S qemu-full virt-manager virt-viewer dnsmasq vde2 bridge-utils openbsd-netcat libguestfs
+sudo pacman -S qemu-full virt-manager virt-viewer dnsmasq vde2 bridge-utils openbsd-netcat libguestfs swtpm
 ```
 
 Depending on you distribution, the name of the packages may be different. This [guide](https://gitlab.com/risingprismtv/single-gpu-passthrough/-/wikis/4\)-Configuration-of-libvirt) contains instructions for other distros.
