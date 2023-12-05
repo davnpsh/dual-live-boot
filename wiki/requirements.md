@@ -40,7 +40,7 @@ If you are like me and these options don't appear in the settings, just look for
 
 By default, SDDM runs on X11, so it reclaims the NVIDIA GPU every time `sddm.service` starts. To avoid this, create a file called `10-wayland.conf` in `/etc/sddm.conf.d/` and put the following contents there:
 
-```bash
+```
 /etc/sddm.conf.d/10-wayland.conf
 --------------------------------------------------------------------------
 [General]
@@ -59,9 +59,38 @@ SDDM on Wayland has some minor bugs but it's fine :).
 Every time the Wayland compositor starts, some processes claim the NVIDIA GPU. To avoid this, add this environment variable in the following path (create the folder and file if they don't exist):
 
 
-```bash
+```
 ~/.config/environment.d/envvars.conf
 --------------------------------------------------------------------------
 __EGL_VENDOR_LIBRARY_FILENAMES=/usr/share/glvnd/egl_vendor.d/50_mesa.json
 
 ```
+
+## Checking processes running on the GPU
+
+On the host, you should have a CLI tool called `nvidia-smi`. We can use it to ensure no processes are keeping our NVIDIA GPU from being detached later and pass it through to the VM.
+
+The last part of the command output should look like this:
+
+```
++---------------------------------------------------------------------------------------+
+| Processes:                                                                            |
+|  GPU   GI   CI        PID   Type   Process name                            GPU Memory |
+|        ID   ID                                                             Usage      |
+|=======================================================================================|
+|  No running processes found                                                           |
++---------------------------------------------------------------------------------------+
+```
+
+We can also check if any of the NVIDIA modules are currently in use by running programs using `lsmod | grep nvidia`:
+
+```
+Module                  Size  Used by
+nvidia_drm            102400  1
+nvidia_modeset       1830912  1 nvidia_drm
+nvidia_uvm           3428352  0
+nvidia               8630272  2 nvidia_uvm,nvidia_modeset
+video                  65536  2 i915,nvidia_modeset
+```
+
+The **Used by** column should look something like that.
