@@ -1,4 +1,4 @@
-# Dual (live) boot
+# Dual (live) boot (for NVIDIA Optimus)
 
 > A guide about how to setup QEMU/KVM for passing resources from a Linux host to a VM guest.
 
@@ -12,7 +12,7 @@ To start, go to the [wiki](https://github.com/davnpsh/dual-live-boot/wiki/1\)-Re
 
 This is a setup ideal for **NVIDIA Optimus** laptops and/or for people with multiple GPUs (one of them being NVIDIA) on their systems and want to dual boot two operating systems at the same time without having to restart or kill the current desktop session.
 
-I use Arch Linux (btw), but in theory this setup should be possible in Debian-based distros, Fedora, etc. with minor differences (secure boot, package names, ...).
+I use Arch Linux (btw), but in theory this setup should be possible in Debian-based distros, Fedora, etc. with some differences (secure boot, package names, ...).
 
 ## Why? (just stick to windows lol)
 
