@@ -24,3 +24,12 @@ ls /dev/input/by-id/
 From the list, look for the mouse and keyboard names that end with `-event-mouse` and `-event-kbd`.
 
 To switch the control between the host and the guest just press both `Ctrl` keys (it doesn't have to be at the same time).
+
+Consider adding these virtio devices as well:
+
+```
+...
+<input type='mouse' bus='virtio'/>
+<input type='keyboard' bus='virtio'/>
+...
+```
