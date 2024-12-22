@@ -1,12 +1,9 @@
-NVIDIA_GPU_VIDEO=pci_0000_01_00_0
-NVIDIA_GPU_AUDIO=pci_0000_01_00_1
+#!/bin/bash
 
-# Unload NVIDIA kernel modules
-rmmod nvidia_modeset nvidia_uvm nvidia
+# === Unload nvidia_drm
 
-# Load VFIO kernel modules
-modprobe -i vfio_pci vfio_pci_core vfio_iommu_type1
-
-# Unbind the GPU from host
-virsh nodedev-detach $NVIDIA_GPU_VIDEO
-virsh nodedev-detach $NVIDIA_GPU_AUDIO
+# Check if nvidia_drm is loaded and not in use
+if lsmod | grep -q nvidia_drm; then
+    # Try to unload it
+    modprobe -r nvidia_drm || exit 1
+fi
